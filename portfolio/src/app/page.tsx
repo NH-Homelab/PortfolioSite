@@ -3,6 +3,7 @@
 // import { url } from "inspector";
 // import Image from "next/image";
 import Section from "./components/section";
+import Card from "./components/card"
 
 export default function Home() {
   return (
@@ -27,8 +28,10 @@ export default function Home() {
           </div>
         </Section>
         <Section className="snap-start">
-          <div className="w-screen h-screen">
-            <p>test</p>
+          <div className="w-screen h-screen flex flex-row flex-wrap gap-10 py-30 justify-center items-center">
+            <Card title="Portfolio Project" img_path="portexample.png" github_link="https://github.com/NH-Homelab/PortfolioSite">
+              <p className="text-center">Checkout the github page for this site! Self hosted on an nginx server.</p>
+            </Card>
           </div>
         </Section>  
       </div>
