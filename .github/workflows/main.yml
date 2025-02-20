@@ -31,5 +31,5 @@ jobs:
           cd portfolio
           npm i
           npm run build
-          rm /var/www/html/*
+          rm -r /var/www/html/*
           cp -r ./out/* /var/www/html
