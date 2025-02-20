@@ -32,4 +32,4 @@ jobs:
           npm i
           npm run build
           rm /var/www/html/*
-          cp ./out/* /var/www/html
+          cp -r ./out/* /var/www/html
