@@ -2,7 +2,7 @@
 A public site that hosts information about myself and my projects. [Check it out!](https://www.nicholashenley.com)
 
 ## Structure
-Created a static site using Next.JS. Using tailwind for styling.
+Created a static site using Next.JS and tailwind for styling.
 
 ## Hosting
 I've hosted the site in a container on my Proxmox homelab. The static files are served using an nginx server running in a container. 
