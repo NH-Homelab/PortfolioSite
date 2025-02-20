@@ -28,6 +28,7 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: Generate production build and copy to /var/www/html
         run: |
+          cd portfolio
           npm run build
           rm /var/www/html/*
           cp ./out/* /var/www/html
