@@ -4,6 +4,7 @@
 // import Image from "next/image";
 import Section from "./components/section";
 import Card from "./components/card"
+import CardCarousel from "./components/CardCarousel";
 
 export default function Home() {
   return (
@@ -28,10 +29,31 @@ export default function Home() {
           </div>
         </Section>
         <Section className="snap-start">
-          <div className="w-screen h-screen flex flex-row flex-wrap gap-10 py-30 justify-center items-center">
-            <Card title="Portfolio Project" img_path="portexample.png" github_link="https://github.com/NH-Homelab/PortfolioSite">
-              <p className="text-center">Checkout the github page for this site! Self hosted on an nginx server.</p>
-            </Card>
+          <div className="w-screen h-screen flex flex-col flex-wrap gap-10 p-30 justify-center items-center">
+            <h1 className="text-center md:text-right text-6xl font-bold text-gray-800 text-nowrap">Projects</h1>
+            <CardCarousel>
+              <div className="flex-[0_0_80%] md:flex-[0_0_33%]">
+                <Card title="Portfolio Project" img_path="portexample.png" github_link="https://github.com/NH-Homelab/PortfolioSite">
+                  <p className="text-center">Checkout the github page for this site! Self hosted on an nginx server.</p>
+                </Card>
+              </div>
+              <div className="flex-[0_0_80%] md:flex-[0_0_33%]">
+                <Card title="Portfolio Project" img_path="portexample.png" github_link="https://github.com/NH-Homelab/PortfolioSite">
+                  <p className="text-center">Checkout the github page for this site! Self hosted on an nginx server.</p>
+                </Card>
+              </div>
+              <div className="flex-[0_0_80%] md:flex-[0_0_33%]">
+                <Card title="Portfolio Project" img_path="portexample.png" github_link="https://github.com/NH-Homelab/PortfolioSite">
+                  <p className="text-center">Checkout the github page for this site! Self hosted on an nginx server.</p>
+                </Card>
+              </div>
+              <div className="flex-[0_0_80%] md:flex-[0_0_33%]">
+                <Card title="Portfolio Project" img_path="portexample.png" github_link="https://github.com/NH-Homelab/PortfolioSite">
+                  <p className="text-center">Checkout the github page for this site! Self hosted on an nginx server.</p>
+                </Card>
+              </div>
+              <div className="flex-[0_0_1%]"></div> {/* Right Spacer */}
+            </CardCarousel>
           </div>
         </Section>  
       </div>
