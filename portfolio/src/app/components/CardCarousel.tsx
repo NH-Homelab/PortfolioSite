@@ -1,5 +1,5 @@
 import useEmblaCarousel from "embla-carousel-react";
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect } from "react";
 
 export default function CardCarousel({ children }: { children: React.ReactNode }) {
     const [emblaRef, embla] = useEmblaCarousel({align: "center", loop: true});

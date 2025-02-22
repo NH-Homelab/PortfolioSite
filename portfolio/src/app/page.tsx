@@ -5,11 +5,8 @@
 import Section from "./components/section";
 import Card from "./components/card"
 import CardCarousel from "./components/CardCarousel";
-import { useState } from "react";
 
 export default function Home() {
-  const [selectedIndex, setSelectedIndex] = useState(0);
-
   return (
     <>
       <div className="flex flex-col h-screen overflow-y-scroll gap-0 snap-y snap-mandatory">
@@ -42,7 +39,7 @@ export default function Home() {
                 <p className="text-center">Mobile focused event and vendor management suite for the Portland Indigenous Marketplace organization.</p>
               </Card>
               <Card title="Homelab - Nginx Config" img_path="nginx.jpg" github_link="https://github.com/NH-Homelab/NGinx-Config">
-                <p className="text-center">Homelab's nginx configuration. Configured to serve static files from /var/www/html and proxy requests to self hosted services.</p>
+                <p className="text-center">Homelab&apos;s nginx configuration. Configured to serve static files from /var/www/html and proxy requests to self hosted services.</p>
               </Card>
               <Card title="Homelab" img_path="proxmox.png" github_link="https://github.com/NH-Homelab">
                 <p className="text-center">Homelab for my projects. Repurposed a desktop PC running Proxmox OS to containerize self hosted services and to deploy personal projects.</p>
