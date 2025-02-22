@@ -41,11 +41,11 @@ export default function Home() {
               <Card title="Portland Indigenous Marketplace" img_path="pim_project/vendors.png" img_width={150} github_link="https://github.com/Blueprint-Boulder/f23-PortlandIndigenousMarketplace">
                 <p className="text-center">Mobile focused event and vendor management suite for the Portland Indigenous Marketplace organization.</p>
               </Card>
-              <Card title="Portfolio Project" img_path="portexample.png" github_link="https://github.com/NH-Homelab/PortfolioSite">
-                <p className="text-center">Checkout the github page for this site! Self hosted on an nginx server.</p>
+              <Card title="Homelab - Nginx Config" img_path="nginx.jpg" github_link="https://github.com/NH-Homelab/NGinx-Config">
+                <p className="text-center">Homelab's nginx configuration. Configured to serve static files from /var/www/html and proxy requests to self hosted services.</p>
               </Card>
-              <Card title="Portfolio Project" img_path="portexample.png" github_link="https://github.com/NH-Homelab/PortfolioSite">
-                <p className="text-center">Checkout the github page for this site! Self hosted on an nginx server.</p>
+              <Card title="Homelab" github_link="https://github.com/NH-Homelab">
+                <p className="text-center">Homelab for my projects. Repurposed a desktop PC running Proxmox OS to containerize self hosted services and to deploy personal projects.</p>
               </Card>
               <div className="flex-[0_0_1%]"></div> {/* Right Spacer */}
             </CardCarousel>
