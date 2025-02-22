@@ -44,7 +44,7 @@ export default function Home() {
               <Card title="Homelab - Nginx Config" img_path="nginx.jpg" github_link="https://github.com/NH-Homelab/NGinx-Config">
                 <p className="text-center">Homelab's nginx configuration. Configured to serve static files from /var/www/html and proxy requests to self hosted services.</p>
               </Card>
-              <Card title="Homelab" github_link="https://github.com/NH-Homelab">
+              <Card title="Homelab" img_path="proxmox.png" github_link="https://github.com/NH-Homelab">
                 <p className="text-center">Homelab for my projects. Repurposed a desktop PC running Proxmox OS to containerize self hosted services and to deploy personal projects.</p>
               </Card>
               <div className="flex-[0_0_1%]"></div> {/* Right Spacer */}
