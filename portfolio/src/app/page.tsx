@@ -10,8 +10,9 @@ export default function Home() {
   return (
     <>
       <div className="flex flex-col h-screen overflow-y-scroll gap-0 snap-y snap-mandatory">
-        <Section className="relative">
-          <div className="absolute h-full w-full bg-no-repeat bg-bottom bg-contain" style={{ backgroundImage: "url('/mnt.svg')" }}></div>
+        <Section className="relative overflow-x-clip">
+          {/* <div className="absolute h-full w-full bg-no-repeat bg-bottom bg-contain opacity-90 z-10 -translate-y-1 translate-x-1" style={{ backgroundImage: "url('/mnt.svg')" }}></div> */}
+          <div className="absolute h-full w-full bg-no-repeat bg-bottom bg-contain z-0" style={{ backgroundImage: "url('/mnt_cl.svg')" }}></div>
           <div className="relative w-screen h-screen">
             <div className="flex flex-col justify-center items-center md:flex-row pt-40 gap-5">
               <div className="flex flex-col pb-5 border-b-2 border-black w-min justify-center md:w-1/2 md:pb-0 md:border-b-0 md:pr-5 md:border-r-2">
