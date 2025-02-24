@@ -1,8 +1,10 @@
 import useEmblaCarousel from "embla-carousel-react";
-import { useCallback, useEffect } from "react";
+import { useCallback, useEffect, useState } from "react";
 
 export default function CardCarousel({ children }: { children: React.ReactNode }) {
     const [emblaRef, embla] = useEmblaCarousel({align: "center", loop: true});
+    const [selectedIndex, setSelectedIndex] = useState(0);
+
 
     const scrollPrev = useCallback(() => embla && embla.scrollPrev(), [embla]);
     const scrollNext = useCallback(() => embla && embla.scrollNext(), [embla]);
@@ -12,7 +14,7 @@ export default function CardCarousel({ children }: { children: React.ReactNode }
 
         embla.on("select", () => {
             const n = embla.selectedScrollSnap();
-            console.log(n);
+            setSelectedIndex(n);
 
             if(n === embla.slideNodes().length - 1){
                 if (embla.previousScrollSnap() === 0) {
@@ -27,27 +29,33 @@ export default function CardCarousel({ children }: { children: React.ReactNode }
     }, [embla]);
 
     return (
-        <div className="h-7/8 md:h-3/4 w-full max-h-[700px] py-4 relative">
+        <div className="h-full w-full max-h-[700px] relative flex flex-col md:gap-10">
             {/* Carousel Container */}
             <div className="embla overflow-hidden h-full" ref={emblaRef}>
-                <div className="embla__container flex flex-nowrap gap-12 h-full items-center">{children}</div>
+                <div className="embla__container flex flex-nowrap gap-12 h-full items-start">{children}</div>
             </div>
 
-            {/* Left Navigation Button */}
-            <button
-                onClick={scrollPrev}
-                className="absolute left-60 translate-x-80 bottom-0 bg-gray-800 text-white text-4xl p-3 rounded-full shadow-lg hover:bg-gray-700 transition"
-            >
-                ❮
-            </button>
-
-            {/* Right Navigation Button */}
-            <button
-                onClick={scrollNext}
-                className="absolute right-60 -translate-x-80 bottom-0 bg-gray-800 text-white text-4xl p-3 rounded-full shadow-lg hover:bg-gray-700 transition"
-            >
-                ❯
-            </button>
+            <div className="flex flex-row w-full justify-center gap-20">
+                <button
+                    onClick={scrollPrev}
+                    className="relative collapse md:visible bg-gray-800 text-white text-4xl p-3 rounded-full shadow-xl hover:bg-gray-700 transition"
+                >
+                    ❮
+                </button>
+                {
+                    <div className="flex flex-row gap-3 w-min justify-center items-center">
+                        {embla && embla.slideNodes().map((_, i) => (
+                            i < embla.slideNodes().length - 1 && <div key={i} className={`border-2 border-black w-3 h-3 rounded-full ${ i === selectedIndex ? "bg-indigo-500" : ""}`}></div>
+                        ))}
+                    </div>
+                }
+                <button
+                    onClick={scrollNext}
+                    className="relative collapse md:visible bg-gray-800 text-white text-4xl p-3 rounded-full shadow-xl hover:bg-gray-700 transition"
+                >
+                    ❯
+                </button>
+            </div>
         </div>
     );
 }
