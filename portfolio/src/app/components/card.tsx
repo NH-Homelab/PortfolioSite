@@ -1,9 +1,10 @@
 import { Project } from '../objects/project';
 
-export default function Card({ img_width, project }: Readonly<{ project: Project, img_width?: string }>) {
+export default function Card({ img_width, project, onClick }: Readonly<{ project: Project, img_width?: string, onClick: (project: Project) => void }>) {
     return (
         <div
             className={`flex flex-col flex-[0_0_80%] md:flex-[0_0_33%] h-full max-h-[600px] md:max-h-[500px] justify-center items-center p-5 rounded-lg shadow-lg gap-4 md:gap-5`}
+            onClick={() => onClick(project)}
         >
             <div className="flex flex-col gap-0 justify-center items-center">
                 <h1 className="text-2xl font-bold text-center">{project.title}</h1>

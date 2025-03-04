@@ -2,14 +2,26 @@
 
 // import { url } from "inspector";
 // import Image from "next/image";
+import { useState } from 'react';
+
 import Section from "./components/section";
+
 import Card from "./components/card"
 import CardCarousel from "./components/CardCarousel";
 
+import ProjectModal from "./components/project_modal";
+
 // Project data
+import { Project } from './objects/project';
 import { portfolioProject, portlandIndigenous, nginxConfig, homelab } from './projectData';
 
 export default function Home() {
+  const [selectedProject, setSelectedProject] = useState<Project | null>(null);
+
+  const closeProjectModal = () => {
+    setSelectedProject(null);
+  }
+
   return (
     <>
       <div className="flex flex-col h-screen overflow-y-scroll gap-0 snap-y snap-mandatory">
@@ -33,13 +45,14 @@ export default function Home() {
           </div>
         </Section>
         <Section>
+          { selectedProject && <ProjectModal project={selectedProject} closeModal={closeProjectModal}/> }
           <div className="w-screen h-screen flex flex-col gap-5 md:gap-10 pt-5 justify-center items-center">
             <h1 className="text-center text-4xl md:text-6xl font-bold text-gray-800 text-nowrap">Projects</h1>
             <CardCarousel>
-              <Card project={portfolioProject} />
-              <Card project={portlandIndigenous} img_width={"w-2/3 lg:w-1/3"}/>
-              <Card project={nginxConfig} />
-              <Card project={homelab} />
+              <Card project={portfolioProject} onClick={setSelectedProject}/>
+              <Card project={portlandIndigenous} onClick={setSelectedProject} img_width={"w-2/3 lg:w-1/3"}/>
+              <Card project={nginxConfig} onClick={setSelectedProject}/>
+              <Card project={homelab} onClick={setSelectedProject}/>
               <div className="flex-[0_0_1%]"></div> {/* Right Spacer */}
             </CardCarousel>
           </div>
