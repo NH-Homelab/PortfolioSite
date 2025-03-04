@@ -36,7 +36,7 @@ export default function Home() {
               <Card title="Portfolio Project" img_path="portexample.png" github_link="https://github.com/NH-Homelab/PortfolioSite">
                 <p className="text-center">Checkout the github page for this site! Self hosted on an nginx server.</p>
               </Card>
-              <Card title="Portland Indigenous Marketplace" img_path="pim_project/vendors.png" orientation={"md:flex-row flex-col"} img_width={"w-2/3 lg:w-1/3"} github_link="https://github.com/Blueprint-Boulder/f23-PortlandIndigenousMarketplace">
+              <Card title="Portland Indigenous Marketplace" img_path="pim_project/vendors.png" img_width={"w-2/3 lg:w-1/3"} github_link="https://github.com/Blueprint-Boulder/f23-PortlandIndigenousMarketplace">
                 <p className="text-center">Mobile focused event and vendor management suite for the Portland Indigenous Marketplace organization.</p>
               </Card>
               <Card title="Homelab - Nginx Config" img_path="nginx.jpg" github_link="https://github.com/NH-Homelab/NGinx-Config">

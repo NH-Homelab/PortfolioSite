@@ -2,7 +2,7 @@
 
 // const transition_str = "transition transform hover:scale-110";
 
-export default function Card({title, img_path, img_width, orientation, github_link, children}: Readonly<{title: string, img_path?: string, img_width?: string, github_link?: string, orientation?: string,children: React.ReactNode}>) {
+export default function Card({title, img_path, img_width, github_link, children}: Readonly<{title: string, img_path?: string, img_width?: string, github_link?: string,children: React.ReactNode}>) {
     return (
         <div className={`flex flex-col flex-[0_0_80%] md:flex-[0_0_33%] h-full max-h-[600px] md:max-h-[500px] justify-center items-center p-5 rounded-lg shadow-lg gap-4 md:gap-5`}>
             <div className="flex flex-col gap-0 justify-center items-center">
