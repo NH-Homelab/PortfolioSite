@@ -29,6 +29,33 @@ export default function Home() {
             </div>
           </div>
         </Section>
+        <div className="sticky top-0 flex flex-row w-screen justify-between items-center py-2 px-10">
+          <div className="flex flex-col items-start w-full">
+            <h1 className="text-right text-6xl font-bold text-gray-800 text-nowrap">Nick Henley</h1>
+            <h2 className="text-right text-3xl text-gray-500">Software Engineer</h2>
+            <p className="text-right">Broomfield, CO</p>
+          </div>
+          <div className="flex gap-3 md:w-1/2 items-center justify-center h-min items-stretch">
+            <a target="_blank" href="mailto:nicholas.henley@colorado.edu" className="flex items-center text-indigo-400 pr-3 border-r-2 border-black">Nicholas.Henley@colorado.edu</a>
+            <a target="_blank" href="https://linkedin.com/in/nhenley" className="flex items-center pr-3 border-r-2 border-black">
+              <img src="/icons/linkedin.png" alt="linkedin" className="w-10" />
+            </a>
+            <a target="_blank" href="https://github.com/nh602" className="flex items-center pr-3">
+              <img src="/icons/github.png" alt="github" className="w-10" />
+            </a>
+          </div>
+        </div>
+        {/* <Section>
+          <div className="w-screen h-screen flex flex-col gap-5 md:gap-10 pt-5 justify-center items-center">
+            <h1 className="text-center text-4xl md:text-6xl font-bold text-gray-800 text-nowrap">About</h1>
+            <div className="flex flex-row gap-5 md:gap-10 justify-center w-screen ">
+              <img src="/headshot.png" alt="headshot" className="w-1/2 md:w-1/5"/>
+              <div className="flex flex-col gap-4 border-l-2 border-black pl-5">
+                <h1>Hobbies</h1>
+              </div>
+            </div>  
+          </div>
+        </Section> */}
         <Section>
           <div className="w-screen h-screen flex flex-col gap-5 md:gap-10 pt-5 justify-center items-center">
             <h1 className="text-center text-4xl md:text-6xl font-bold text-gray-800 text-nowrap">Projects</h1>
