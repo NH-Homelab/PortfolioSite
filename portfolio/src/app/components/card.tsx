@@ -3,7 +3,7 @@ import { Project } from '../objects/project';
 export default function Card({ img_width, project, onClick }: Readonly<{ project: Project, img_width?: string, onClick: (project: Project) => void }>) {
     return (
         <div
-            className={`flex flex-col flex-[0_0_80%] md:flex-[0_0_33%] h-full max-h-[600px] md:max-h-[500px] justify-center items-center p-5 rounded-lg shadow-lg gap-4 md:gap-5`}
+            className={`flex flex-col flex-[0_0_80%] md:flex-[0_0_33%] h-full max-h-[600px] md:max-h-[500px] justify-center items-center p-5 rounded-lg shadow-lg gap-4 md:gap-5 cursor-pointer`}
             onClick={() => onClick(project)}
         >
             <div className="flex flex-col gap-0 justify-center items-center">

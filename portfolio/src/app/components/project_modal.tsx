@@ -5,8 +5,8 @@ export default function ProjectModal({project, closeModal}: Readonly<{project: P
   {
     <>
       <div className="fixed z-10 w-screen h-screen inset-0 flex justify-center">
-        <div className="absolute z-0 w-full h-full backdrop-blur-md" onClick={closeModal}></div>
-        <div className="p-10 z-10 w-3/4 h-full overflow-y-scroll bg-slate-100 flex flex-col gap-5">
+        <div className="absolute z-0 w-full h-full backdrop-blur-md cursor-pointer" onClick={closeModal}></div>
+        <div className="p-10 z-10 w-3/4 h-full overflow-y-scroll bg-stone-100 flex flex-col gap-5">
           <div className="flex flex-row justify-end">
             <button onClick={closeModal} className="text-4xl text-black p-2">X</button>
           </div>
