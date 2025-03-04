@@ -2,11 +2,13 @@ class Project_Section {
   heading: string;
   body: string;
   img_path: string;
+  subsections: Project_Section[] = [];
 
-  constructor(heading: string, body:string, img_path: string = "") {
+  constructor(heading: string, body:string, img_path: string = "", subsections: Project_Section[] = []) {
     this.heading = heading;
     this.body = body;
     this.img_path = img_path;
+    this.subsections = subsections;
   }
 }
 
