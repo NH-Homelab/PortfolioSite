@@ -32,7 +32,7 @@ export default function CardCarousel({ children }: { children: React.ReactNode }
         <div className="h-full w-full max-h-[700px] relative flex flex-col md:gap-10">
             {/* Carousel Container */}
             <div className="embla overflow-hidden h-full" ref={emblaRef}>
-                <div className="embla__container flex flex-nowrap gap-12 h-full items-start">{children}</div>
+                <div className="embla__container flex flex-nowrap gap-12 h-full items-center">{children}</div>
             </div>
 
             <div className="flex flex-row w-full justify-center gap-20">
