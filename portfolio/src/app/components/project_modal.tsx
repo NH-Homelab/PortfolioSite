@@ -9,7 +9,7 @@ export default function ProjectModal({ project, closeModal }: Readonly<{ project
           <div className="sticky top-0 flex flex-col gap-2 sm:gap-4 bg-stone-100 w-full py-2 rounded-sm shadow-md z-20">
             <div className="flex flex-row justify-between items-center w-full px-6">
               <div className="flex-1 text-center">
-                <h1 className="text-5xl font-bold">{project.title}</h1>
+                <h1 className="text-3xl sm:text-5xl font-bold">{project.title}</h1>
               </div>
               <button onClick={closeModal} className="text-4xl text-black">x</button>
             </div>
