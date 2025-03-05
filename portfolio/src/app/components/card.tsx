@@ -3,7 +3,7 @@ import { Project } from '../objects/project';
 export default function Card({ project, onClick }: Readonly<{ project: Project, onClick: (project: Project) => void }>) {
     return (
         <div
-            className={`flex flex-col flex-[0_0_80%] md:flex-[0_0_33%] h-full max-h-[600px] md:max-h-[500px] justify-center items-center p-5 rounded-lg shadow-lg gap-4 md:gap-5 cursor-pointer`}
+            className={`flex flex-col flex-[0_0_80%] md:flex-[0_0_33%] h-full max-h-[600px] md:max-h-[500px] justify-center items-center p-5 rounded-sm shadow-lg gap-4 md:gap-5 cursor-pointer border-t-2 border-black`}
             onClick={() => onClick(project)}
         >
             <div className="flex flex-col gap-0 justify-center items-center">
