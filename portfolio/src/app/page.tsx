@@ -24,7 +24,7 @@ export default function Home() {
 
   return (
     <>
-      <div className="flex flex-col h-screen overflow-y-scroll gap-0 snap-y snap-mandatory">
+      <div className="flex flex-col h-screen overflow-y-scroll gap-0 snap-y snap-mandatory no-scrollbar">
         <Section className="relative overflow-x-clip">
           {/* <div className="absolute h-full w-full bg-no-repeat bg-bottom bg-contain opacity-90 z-10 -translate-y-1 translate-x-1" style={{ backgroundImage: "url('/mnt.svg')" }}></div> */}
           <div className="absolute h-full w-full bg-no-repeat bg-bottom bg-contain z-0" style={{ backgroundImage: "url('/mnt_cl.svg')" }}></div>
@@ -49,10 +49,10 @@ export default function Home() {
           <div className="w-screen h-screen flex flex-col gap-5 md:gap-10 pt-5 justify-center items-center">
             <h1 className="text-center text-4xl md:text-6xl font-bold text-gray-800 text-nowrap">Projects</h1>
             <CardCarousel>
-              <Card project={portfolioProject} onClick={setSelectedProject}/>
-              <Card project={portlandIndigenous} onClick={setSelectedProject} img_width={"w-2/3 lg:w-1/3"}/>
-              <Card project={nginxConfig} onClick={setSelectedProject}/>
               <Card project={homelab} onClick={setSelectedProject}/>
+              <Card project={portfolioProject} onClick={setSelectedProject}/>
+              <Card project={portlandIndigenous} onClick={setSelectedProject}/>
+              <Card project={nginxConfig} onClick={setSelectedProject}/>
               <div className="flex-[0_0_1%]"></div> {/* Right Spacer */}
             </CardCarousel>
           </div>

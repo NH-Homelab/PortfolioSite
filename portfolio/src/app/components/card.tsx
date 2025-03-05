@@ -1,6 +1,6 @@
 import { Project } from '../objects/project';
 
-export default function Card({ img_width, project, onClick }: Readonly<{ project: Project, img_width?: string, onClick: (project: Project) => void }>) {
+export default function Card({ project, onClick }: Readonly<{ project: Project, onClick: (project: Project) => void }>) {
     return (
         <div
             className={`flex flex-col flex-[0_0_80%] md:flex-[0_0_33%] h-full max-h-[600px] md:max-h-[500px] justify-center items-center p-5 rounded-lg shadow-lg gap-4 md:gap-5 cursor-pointer`}
@@ -19,7 +19,7 @@ export default function Card({ img_width, project, onClick }: Readonly<{ project
                 {project.img_path != "" && (
                     <img src={project.img_path}
                         alt={project.title}
-                        className={`flex flex-basis-2/3 border-2 border-black object-scale-down ${img_width || 'w-full md:w-3/4'}`} />
+                        className={`flex flex-basis-2/3 border-2 border-black object-scale-down ${project.img_width || 'w-full md:w-3/4'}`} />
                 )}
             </div>
         </div>
