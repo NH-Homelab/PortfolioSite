@@ -29,16 +29,16 @@ export default function CardCarousel({ children }: { children: React.ReactNode }
     }, [embla]);
 
     return (
-        <div className="h-full w-full max-h-[700px] relative flex flex-col md:gap-10">
+        <div className="h-full w-full relative flex flex-col md:gap-5">
             {/* Carousel Container */}
-            <div className="embla overflow-hidden h-full" ref={emblaRef}>
+            <div className="embla overflow-hidden h-full py-2" ref={emblaRef}>
                 <div className="embla__container flex flex-nowrap gap-12 h-full items-center">{children}</div>
             </div>
 
             <div className="flex flex-row w-full justify-center gap-20">
                 <button
                     onClick={scrollPrev}
-                    className="relative collapse md:visible bg-gray-800 text-white text-4xl p-3 rounded-full shadow-xl hover:bg-gray-700 transition"
+                    className="relative collapse md:visible bg-gray-800 text-white text-3xl p-3 rounded-full shadow-xl hover:bg-gray-700 transition"
                 >
                     ❮
                 </button>
@@ -51,7 +51,7 @@ export default function CardCarousel({ children }: { children: React.ReactNode }
                 }
                 <button
                     onClick={scrollNext}
-                    className="relative collapse md:visible bg-gray-800 text-white text-4xl p-3 rounded-full shadow-xl hover:bg-gray-700 transition"
+                    className="relative collapse md:visible bg-gray-800 text-white text-3xl p-3 rounded-full shadow-xl hover:bg-gray-700 transition"
                 >
                     ❯
                 </button>

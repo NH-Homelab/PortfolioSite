@@ -67,8 +67,8 @@ export default function Home() {
           </div>
         </Section> */}
         <Section>
-          <div className="w-screen h-screen flex flex-col gap-5 md:gap-10 pt-5 justify-center items-center">
-            <h1 className="text-center text-4xl md:text-6xl font-bold text-gray-800 text-nowrap">Projects</h1>
+          <div className="w-screen h-screen flex flex-col gap-5 pt-5 justify-center items-center md:gap-10 md:py-10">
+            <h1 className="text-center text-4xl md:text-4xl font-bold text-gray-800 text-nowrap">Projects</h1>
             <CardCarousel>
               <Card title="Portfolio Project" img_path="portexample.png" github_link="https://github.com/NH-Homelab/PortfolioSite">
                 <p className="text-center">Checkout the github page for this site! Self hosted on an nginx server.</p>
