@@ -15,10 +15,18 @@ export default function Home() {
           <div className="absolute h-full w-full bg-no-repeat bg-bottom bg-contain z-0" style={{ backgroundImage: "url('/mnt_cl.svg')" }}></div>
           <div className="relative w-screen h-screen">
             <div className="flex flex-col justify-center items-center md:flex-row pt-40 gap-5">
-              <div className="flex flex-col pb-5 border-b-2 border-black w-min justify-center md:w-1/2 md:pb-0 md:border-b-0 md:pr-5 md:border-r-2">
+              <div className="flex flex-col gap-1 pb-5 border-b-2 border-black w-min justify-center md:w-1/2 md:pb-0 md:border-b-0 md:pr-5 md:border-r-2">
                 <h1 className="text-center md:text-right text-6xl font-bold text-gray-800 text-nowrap">Nick Henley</h1>
                 <h2 className="text-center md:text-right text-3xl text-gray-500">Software Engineer</h2>
-                <p className="text-center md:text-right text-indigo-400"><a href="https://linkedin.com/in/nhenley">Linkedin.com/in/nhenley</a></p>
+                <div className="flex gap-3 w-full items-center justify-end h-min items-stretch">
+                  <a target="_blank" href="mailto:nicholas.henley@colorado.edu" className="flex items-center text-indigo-400 pr-3 border-r-2 border-black"><img src="/icons/mail.png" alt="linkedin" className="w-10" /></a>
+                  <a target="_blank" href="https://linkedin.com/in/nhenley" className="flex items-center pr-3 border-r-2 border-black">
+                    <img src="/icons/linkedin.png" alt="linkedin" className="w-10" />
+                  </a>
+                  <a target="_blank" href="https://github.com/nh602" className="flex items-center pr-3">
+                    <img src="/icons/github.png" alt="github" className="w-10" />
+                  </a>
+                </div>
               </div>     
               <div className="flex flex-col justify-center md:w-1/2">
                 <p className="text-black text-center px-2 text-wrap md:text-left md:w-1/2">
@@ -35,8 +43,10 @@ export default function Home() {
             <h2 className="text-right text-3xl text-gray-500">Software Engineer</h2>
             <p className="text-right">Broomfield, CO</p>
           </div>
-          <div className="flex gap-3 md:w-1/2 items-center justify-center h-min items-stretch">
-            <a target="_blank" href="mailto:nicholas.henley@colorado.edu" className="flex items-center text-indigo-400 pr-3 border-r-2 border-black">Nicholas.Henley@colorado.edu</a>
+          <div className="flex gap-3 md:w-1/2 items-center justify-end h-min items-stretch">
+            <a target="_blank" href="mailto:nicholas.henley@colorado.edu" className="flex items-center text-indigo-400 pr-3 border-r-2 border-black">
+              <img src="/icons/mail.png" alt="linkedin" className="w-10" />
+            </a>
             <a target="_blank" href="https://linkedin.com/in/nhenley" className="flex items-center pr-3 border-r-2 border-black">
               <img src="/icons/linkedin.png" alt="linkedin" className="w-10" />
             </a>
