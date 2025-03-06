@@ -107,7 +107,7 @@ export const homelab = new Project(
   "Homelab",
   "projects/proxmox.png",
   "https://github.com/NH-Homelab",
-  "Homelab for my projects. Repurposed a desktop PC running Proxmox OS to containerize self hosted services and to deploy personal projects.",
+  "Homelab for my projects. Repurposed a desktop PC running Proxmox OS to containerize self hosted services and to deploy projects.",
   ["Proxmox", "NGINX", "PostgreSQL", "React", "Node.js", "Express.js", "Docker"],
   [
     new Project_Section(

@@ -31,7 +31,7 @@ export default function Home() {
               <div className="flex flex-col gap-5 p-10 h-min">
                 <div className="flex flex-col gap-2">
                   <h1 className="text-6xl text-center font-bold">Nick Henley</h1>
-                  <h2 className="text-2xl text-center font-bold">Software Developer</h2>
+                  <h2 className="text-2xl text-center font-bold text-gray-500">Software Developer</h2>
                 </div>
                 <div className="flex gap-3 w-full items-center justify-center h-min items-stretch border-t-[1px] border-black pt-5">
                   <a target="_blank" href="mailto:nicholas.henley@colorado.edu" className="flex items-center text-indigo-400 pr-3 border-r-2 border-black"><img src="/icons/mail.png" alt="linkedin" className="w-10" /></a>
@@ -43,16 +43,35 @@ export default function Home() {
                   </a>
                 </div>
               </div>
-              <div className="overflow-clip shadow-2xl bg-[radial-gradient(ellipse_at_bottom,_var(--tw-gradient-stops))] from-sky-100 to-slate-50 p-5 rounded-full h-[450px] w-[450px]">
+              <div className="overflow-clip shadow-2xl border-slate-300 border-[1px] bg-[radial-gradient(ellipse_at_bottom,_var(--tw-gradient-stops))] from-sky-100 to-slate-50 p-5 rounded-full h-[450px] w-[450px]">
                 <img src="headshot.png" className=""/>
               </div>
             </div>
           </div>
         </Section>
+        {/* Sticky header after first section */}
+        <div className="sticky top-0 flex flex-row w-screen justify-between items-center pl-10 pr-20">
+            <div className="flex flex-col items-start bg-slate-100 w-min">
+              <h1 className="text-right text-4xl font-bold text-gray-800 text-nowrap">Nick Henley</h1>
+              <h2 className="text-right text-1xl text-gray-500">Software Developer</h2>
+              <p className="text-right">Broomfield, CO</p>
+            </div>
+            <div className="flex gap-3 md:w-1/2 items-center justify-end h-min items-stretch">
+              <a target="_blank" href="mailto:nicholas.henley@colorado.edu" className="flex items-center text-indigo-400 pr-3 border-r-2 border-black">
+                <img src="/icons/mail.png" alt="linkedin" className="w-10" />
+              </a>
+              <a target="_blank" href="https://linkedin.com/in/nhenley" className="flex items-center pr-3 border-r-2 border-black">
+                <img src="/icons/linkedin.png" alt="linkedin" className="w-10" />
+              </a>
+              <a target="_blank" href="https://github.com/nh602" className="flex items-center pr-3">
+                <img src="/icons/github.png" alt="github" className="w-10" />
+              </a>
+            </div>
+          </div>
         <Section>
           { selectedProject && <ProjectModal project={selectedProject} closeModal={closeProjectModal}/> }
           <div className="w-screen h-screen flex flex-col gap-5 md:gap-10 pt-5 justify-center items-center">
-            <h1 className="text-center text-4xl md:text-6xl font-bold text-gray-800 text-nowrap">Projects</h1>
+            <h1 className="text-center text-4xl md:text-6xl font-bold text-gray-800 text-nowrap z-10">Projects</h1>
             <CardCarousel>
               <Card project={homelab} onClick={setSelectedProject}/>
               <Card project={portfolioProject} onClick={setSelectedProject}/>
@@ -62,6 +81,7 @@ export default function Home() {
             </CardCarousel>
           </div>
         </Section>
+        
       </div>
     </>
   );
