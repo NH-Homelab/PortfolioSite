@@ -26,20 +26,25 @@ export default function Home() {
     <>
       <div className="flex flex-col h-screen overflow-y-scroll gap-0 snap-y snap-mandatory no-scrollbar">
         <Section className="relative overflow-x-clip">
-          {/* <div className="absolute h-full w-full bg-no-repeat bg-bottom bg-contain opacity-90 z-10 -translate-y-1 translate-x-1" style={{ backgroundImage: "url('/mnt.svg')" }}></div> */}
-          <div className="absolute h-full w-full bg-no-repeat bg-bottom bg-contain z-0" style={{ backgroundImage: "url('/mnt_cl.svg')" }}></div>
-          <div className="relative w-screen h-screen">
-            <div className="flex flex-col justify-center items-center md:flex-row pt-40 gap-5">
-              <div className="flex flex-col pb-5 border-b-2 border-black w-min justify-center md:w-1/2 md:pb-0 md:border-b-0 md:pr-5 md:border-r-2">
-                <h1 className="text-center md:text-right text-6xl font-bold text-gray-800 text-nowrap">Nick Henley</h1>
-                <h2 className="text-center md:text-right text-3xl text-gray-500">Software Engineer</h2>
-                <p className="text-center md:text-right text-indigo-400"><a href="https://linkedin.com/in/nhenley">Linkedin.com/in/nhenley</a></p>
-              </div>     
-              <div className="flex flex-col justify-center md:w-1/2">
-                <p className="text-black text-center px-2 text-wrap md:text-left md:w-1/2">
-                  Nick Henley is a Computer Science student with a Data Science minor at 
-                  the University of Colorado Boulder, graduating in May 2025.
-                </p>
+          <div className="w-screen h-screen flex flex-col justify-center items-center">
+            <div className="p-10 shadow-lg flex flex-row gap-60 justify-center items-center bg-slate-100 border-t-2 border-black">
+              <div className="flex flex-col gap-5 p-10 h-min">
+                <div className="flex flex-col gap-2">
+                  <h1 className="text-6xl text-center font-bold">Nick Henley</h1>
+                  <h2 className="text-2xl text-center font-bold">Software Developer</h2>
+                </div>
+                <div className="flex gap-3 w-full items-center justify-center h-min items-stretch border-t-[1px] border-black pt-5">
+                  <a target="_blank" href="mailto:nicholas.henley@colorado.edu" className="flex items-center text-indigo-400 pr-3 border-r-2 border-black"><img src="/icons/mail.png" alt="linkedin" className="w-10" /></a>
+                  <a target="_blank" href="https://linkedin.com/in/nhenley" className="flex items-center pr-3 border-r-2 border-black">
+                    <img src="/icons/linkedin.png" alt="linkedin" className="w-10" />
+                  </a>
+                  <a target="_blank" href="https://github.com/nh602" className="flex items-center pr-3">
+                    <img src="/icons/github.png" alt="github" className="w-10" />
+                  </a>
+                </div>
+              </div>
+              <div className="overflow-clip shadow-2xl bg-[radial-gradient(ellipse_at_bottom,_var(--tw-gradient-stops))] from-sky-100 to-slate-50 p-5 rounded-full h-[450px] w-[450px]">
+                <img src="headshot.png" className=""/>
               </div>
             </div>
           </div>
