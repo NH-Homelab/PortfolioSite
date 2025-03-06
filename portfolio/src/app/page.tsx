@@ -37,6 +37,7 @@ export default function Home() {
             </div>
           </div>
         </Section>
+        {/* Sticky header after first section */}
         <div className="sticky top-0 flex flex-row w-screen justify-between items-center py-2 px-10">
           <div className="flex flex-col items-start w-full">
             <h1 className="text-right text-6xl font-bold text-gray-800 text-nowrap">Nick Henley</h1>
@@ -55,6 +56,8 @@ export default function Home() {
             </a>
           </div>
         </div>
+        {/* End Sticky Header */}
+        {/* Start Bio Section */}
         {/* <Section>
           <div className="w-screen h-screen flex flex-col gap-5 md:gap-10 pt-5 justify-center items-center">
             <h1 className="text-center text-4xl md:text-6xl font-bold text-gray-800 text-nowrap">About</h1>
@@ -66,6 +69,7 @@ export default function Home() {
             </div>  
           </div>
         </Section> */}
+        {/* Start Projects Section */}
         <Section>
           <div className="w-screen h-screen flex flex-col gap-5 pt-5 justify-center items-center md:gap-10 md:py-10">
             <h1 className="text-center text-4xl md:text-4xl font-bold text-gray-800 text-nowrap">Projects</h1>
