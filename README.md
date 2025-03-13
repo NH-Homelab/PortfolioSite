@@ -1,4 +1,9 @@
 # PortfolioSite
+
+<p align="center">
+  <img src="portfolio/public/projects/portfolio.png" alt="Portfolio" width="600"/>
+</p>
+
 A public site that hosts information about myself and my projects. [Check it out!](https://www.nicholashenley.com)
 
 ## Structure
