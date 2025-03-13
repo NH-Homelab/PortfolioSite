@@ -2,7 +2,7 @@ import { Project, Project_Section } from './objects/project';
 
 export const portfolioProject = new Project(
   "Portfolio Project",
-  "projects/portexample.png",
+  "projects/portfolio.png",
   "https://github.com/NH-Homelab/PortfolioSite",
   "Checkout the github page for this site! Self hosted on an nginx server.",
   ["React", "TypeScript", "NGINX"],
@@ -12,7 +12,7 @@ export const portfolioProject = new Project(
       `I created this website to showcase some of my projects and demonstrate that I could build a static site with Next.JS and deploy it publicly on the web. 
       Since the site is static, I chose to export the files and serve them using the nginx server running on my homelab. Check out
       my other projects to see the Nginx configuration project.`, 
-      "projects/portexample.png",
+      "projects/portfolio.png",
       [],
       "w-full sm:w-3/4"),
   ]
@@ -107,7 +107,7 @@ export const homelab = new Project(
   "Homelab",
   "projects/proxmox.png",
   "https://github.com/NH-Homelab",
-  "Homelab for my projects. Repurposed a desktop PC running Proxmox OS to containerize self hosted services and to deploy personal projects.",
+  "Homelab for my projects. Repurposed a desktop PC running Proxmox OS to containerize self hosted services and to deploy projects.",
   ["Proxmox", "NGINX", "PostgreSQL", "React", "Node.js", "Express.js", "Docker"],
   [
     new Project_Section(
